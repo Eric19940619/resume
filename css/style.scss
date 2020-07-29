@@ -226,16 +226,23 @@ a {
     .item-title {
       display: flex;
       margin-bottom: 20px;
+      line-height: 50px;
     }
 
     .item-logo {
+      display: inline-block;
       width: 50px;
       height: 50px;
       margin: 0 20px;
       border-radius: 999rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      position: relative;
+
+      i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
     }
 
     &:nth-child(1) {
@@ -318,8 +325,10 @@ a {
 
 footer {
   height: 50px;
-  line-height: 50px;
   text-align: center;
   background-color: $color-gray;
   color: $color-white;
+  p {
+    line-height: 50px;
+  }
 }
