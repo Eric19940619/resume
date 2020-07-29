@@ -220,6 +220,15 @@ a {
       justify-content: space-around;
 }
 
+.about .wrap .item .contact {
+  margin: 10px 0;
+  display: block;
+}
+
+.about .wrap .item .contact i {
+  margin-right: 10px;
+}
+
 .skill .wrap {
   width: 60%;
   display: -webkit-box;

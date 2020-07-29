@@ -197,6 +197,14 @@ a {
         flex-direction: column;
         justify-content: space-around;
       }
+
+      .contact {
+        margin: 10px 0;
+        display: block;
+        i {
+          margin-right: 10px;
+        }
+      }
     }
   }
 }
