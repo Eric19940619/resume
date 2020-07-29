@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/172368dcad.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <title>Resume</title>
+  </head>
+  <body>
+    <header class="top-header">
+      <nav class="main-nav">
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#skill">Skills</a>
+        <a href="#work">Works</a>
+      </nav>
+    </header>
+    <main>
+      <article class="banner block">
+        <div class="banner-text" data-aos="fade-up">
+          <h3>Hi,I'm Eric.</h3>
+          <p>This is my portfolio.</p>
+        </div>
+      </article>
+      <article class="about block" id="about">
+        <h3 class="title">About</h3>
+        <div class="wrap">
+          <section class="item" data-aos="fade-up">
+            <div class="pic">
+              <img src="./image/photo.JPG" alt="" />
+            </div>
+
+            <p>
+              我叫楊舜宇，來自高雄，<br />
+              喜歡探索新事物，<br />
+              喜歡與人團隊協作，<br />
+              喜歡充實且充滿變化的生活。<br />
+              而現在我正在尋找一份與網頁前端相關的工作。
+            </p>
+          </section>
+          <section class="item" data-aos="fade-up">
+            <h4>學歷</h4>
+            <h5>實踐大學 資訊模擬與設計系</h5>
+            <span>2012 - 2016</span>
+            <h5>國立鳳新高級中學</h5>
+            <span>2009 - 2012</span>
+          </section>
+        </div>
+      </article>
+      <article class="skill block" id="skill">
+        <h3 class="title">Skills</h3>
+        <ul class="wrap">
+          <li class="item" data-aos="fade-right">
+            <h4 class="item-title">
+              <div class="item-logo"><i class="fab fa-html5"></i></div>
+              HTML
+            </h4>
+            <p class="item-desc">能使用語意化的標籤架構網頁。</p>
+          </li>
+          <li class="item" data-aos="fade-left">
+            <h4 class="item-title">
+              <div class="item-logo"><i class="fab fa-css3-alt"></i></div>
+              CSS
+            </h4>
+            <p class="item-desc">能使用scss撰寫響應式網頁，可根據設計稿完成版面。</p>
+          </li>
+          <li class="item" data-aos="fade-right">
+            <h4 class="item-title">
+              <div class="item-logo"><i class="fab fa-js"></i></div>
+              Javascript
+            </h4>
+            <p class="item-desc">會使用JavaScript製作網站的互動功能，可以使用第三方插件並串接API。</p>
+          </li>
+          <li class="item" data-aos="fade-left">
+            <h4 class="item-title">
+              <div class="item-logo"><i class="fab fa-vuejs"></i></div>
+              VueJs
+            </h4>
+            <p class="item-desc">會使用該框架搭配Vuex,Vue-Router等依賴去製作網站。</p>
+          </li>
+        </ul>
+      </article>
+      <article class="work block" id="work">
+        <h3 class="title">Works</h3>
+        <div class="wrap">
+          <figure class="item" data-aos="flip-left">
+            <img src="./image/work1.jpg" alt="NewYorkTimes API串接練習" />
+            <figcaption class="item-info">
+              <h5 class="item-title">NewYorkTimes API串接練習</h5>
+              <p class="item-desc">練習使用axios取得Api的資料後，將資料分類並隨著頁面捲動更新畫面。</p>
+              <a href="https://eric19940619.github.io/nytimes/" target="_blank">Demo</a>
+            </figcaption>
+          </figure>
+          <figure class="item" data-aos="flip-left">
+            <img src="./image/work2.jpg" alt="簡易訂單管理" />
+            <figcaption class="item-info">
+              <h5 class="item-title">簡易訂單管理</h5>
+              <p class="item-desc">練習使用Vuejs框架搭配FireStore管理資料，製作簡易的訂單管理系統。</p>
+              <a href="https://eric19940619.github.io/fish/" target="_blank">Demo</a>
+            </figcaption>
+          </figure>
+          <figure class="item" data-aos="flip-left">
+            <img src="./image/work3.jpg" alt=" 線上訂餐網站練習" />
+            <figcaption class="item-info">
+              <h5 class="item-title">線上訂餐網站練習</h5>
+              <p class="item-desc">練習使用VueJs框架與LocalStorage實作小型線上訂餐系統。</p>
+              <a href="https://eric19940619.github.io/foodwebsite/" target="_blank">Demo</a>
+            </figcaption>
+          </figure>
+        </div>
+      </article>
+    </main>
+    <footer>
+      <div class="copyright">
+        <p>&copy;2020 by Eric</p>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init()
+    </script>
+  </body>
+</html>
