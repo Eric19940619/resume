@@ -1,0 +1,17 @@
+{
+  "nav": {
+    "about": "About",
+    "skill": "Skill",
+    "work": "Work"
+  },
+  "about": {
+    "part1": "My name is Eric Yang (ShunYu Yang). I come from Kaohsiung, Taiwan and I graduated from Shih Chien University. I'm majoring in computer science and design.",
+    "part2": "I began to learn programming languages when I was a college student. I learned how to code C# for Unity and I used Unity to create a 2D and 3D game with a team. I also learned how to build a website.",
+    "part3": "I enjoy coding.I hope users have great experience when they visited website what i did."
+  },
+  "headline": {
+    "part1": "Hi! My name is",
+    "part2": "I'm a software developer.",
+    "part3": "Focus on learning Javascript and front end knowledge."
+  }
+}
