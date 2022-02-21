@@ -10,7 +10,6 @@ const growup = keyframes`
 
 const Headline = () => {
   const { t } = useTranslation()
-
   return (
     <Flex
       h={200}
@@ -21,6 +20,7 @@ const Headline = () => {
       <Heading
         as="h3"
         size="md"
+        color="text"
         animation={`${growup} 0.3s linear 0.7s backwards`}
       >
         {t('headline.part1')}
@@ -29,11 +29,16 @@ const Headline = () => {
         as="h1"
         size="4xl"
         my={3}
+        color="heading"
         animation={`${growup} 0.3s linear 1s backwards`}
       >
         Eric Yang
       </Heading>
-      <Text fontSize="2xl" animation={`${growup} 0.3s linear 1.3s backwards`}>
+      <Text
+        fontSize="2xl"
+        color="text"
+        animation={`${growup} 0.3s linear 1.3s backwards`}
+      >
         {t('headline.part2')} <br />
         {t('headline.part3')}
       </Text>

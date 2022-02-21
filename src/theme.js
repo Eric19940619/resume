@@ -1,9 +1,11 @@
 import { extendTheme } from '@chakra-ui/react'
 
-const theme = {
+const config = {
   initialColorMode: 'dark',
-  useSystemColorMode: false,
+  useSystemColorMode: true
+}
 
+const theme = {
   fonts: {
     heading: 'Roboto Mono',
     text: 'Noto Sans TC'
@@ -11,15 +13,16 @@ const theme = {
   semanticTokens: {
     colors: {
       text: { default: 'black', _dark: '#8892b0' },
-      highlight: '#64ffda',
-      heading: { default: 'gray.700', _dark: '#c3c8d6' }
+      highlight: { default: '#0a192f', _dark: '#64ffda' },
+      heading: { default: 'gray.700', _dark: '#c3c8d6' },
+      bg: { default: '#fffafa', _dark: '#0a192f' }
     }
   },
   styles: {
     global: (props) => ({
       'html, body': {
         fontSize: 'md',
-        backgroundColor: props.colorMode === 'dark' ? '#0a192f' : 'white',
+        backgroundColor: props.colorMode === 'dark' ? '#0a192f' : '#fffafa',
         color: props.colorMode === 'dark' ? 'white' : 'gray.600',
         lineHeight: 'tall'
       },
@@ -30,6 +33,6 @@ const theme = {
   }
 }
 
-const Theme = extendTheme(theme)
+const Theme = extendTheme({ ...theme, ...config })
 
 export default Theme

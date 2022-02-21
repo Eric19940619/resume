@@ -18,7 +18,7 @@ const Home = () => {
       <Box
         width={3}
         height={200}
-        background="white"
+        background="text"
         ml={2}
         animation={`${growup} 0.7s`}
       />
