@@ -13,5 +13,26 @@
     "part1": "哈囉! 我是",
     "part2": "我是一個軟體工程師",
     "part3": "專注學習 Javascript 與前端知識"
+  },
+  "skill": {
+    "html": "能使用語意化的標籤架構網頁。",
+    "css": "能寫響應式網頁，會使用預處理器，也會使用 Bootstrap、Ant-Design、ChakraUI等框架加快開發速度。",
+    "javascript": "會使用JavaScript製作網站的互動功能、串接API、會使用Webpack打包工具。",
+    "vuejs": "會使用該框架搭配Vuex,Vue-Router去製作網站。'",
+    "react": "會搭配Redux,React-Router去製作網站，也會使用ReactHooks 例如useState、useReducer、useEffect...等。"
+  },
+  "work": {
+    "work1": {
+      "title": "NewYorkTimes API",
+      "desc": "使用原生Javascript與axios取得Api的資料後，將資料分類並隨著頁面捲動更新畫面。"
+    },
+    "work2": {
+      "title": "訂餐網站",
+      "desc": "使用VueJs框架與LocalStorage實作小型線上訂餐系統。 利用Vuex管理產品數據與購物清單數據並使用VueRouter實現切換分頁功能。"
+    },
+    "work3": {
+      "title": "虛擬貨幣清單",
+      "desc": "使用ReactJs框架，搭配Router切換分頁，使用Axios取得虛擬貨幣Api的資訊後，用Bootstrap來呈現頁面，用C3Js呈現量價圖，最後使用LocalStorage儲存使用者的喜愛清單。"
+    }
   }
 }

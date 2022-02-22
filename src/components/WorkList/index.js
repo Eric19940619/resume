@@ -1,27 +1,25 @@
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { Box, Flex, Heading, Image, Link, Tag, Text } from '@chakra-ui/react'
+import { useTranslation } from 'react-i18next'
 import work1 from '../../assets/image/work1.jpg'
 import work2 from '../../assets/image/work2.jpg'
 import work3 from '../../assets/image/work3.jpg'
 
 const Works = [
   {
-    name: 'NewYorkTimes API',
-    desc: '使用原生Javascript與axios取得Api的資料後，將資料分類並隨著頁面捲動更新畫面。',
+    name: 'work1',
     tags: ['Axios'],
     img: work1,
     url: 'https://eric19940619.github.io/nytimes/'
   },
   {
-    name: '訂餐網站',
-    desc: '使用VueJs框架與LocalStorage實作小型線上訂餐系統。 利用Vuex管理產品數據與購物清單數據並使用VueRouter實現切換分頁功能。',
+    name: 'work2',
     tags: ['VueJs', 'Vuex', 'VueRouter'],
     img: work2,
     url: 'https://eric19940619.github.io/foodwebsite'
   },
   {
-    name: '虛擬貨幣清單',
-    desc: '使用ReactJs框架，搭配Router切換分頁，使用Axios取得虛擬貨幣Api的資訊後，用Bootstrap來呈現頁面，用C3Js呈現量價圖，最後使用LocalStorage儲存使用者的喜愛清單。',
+    name: 'work3',
     tags: ['ReactJs', 'React-Router', 'Axios', 'Bootstrap', 'C3js'],
     img: work3,
     url: 'https://eric19940619.github.io/Coin'
@@ -29,7 +27,8 @@ const Works = [
 ]
 
 const WorkItem = ({ work }) => {
-  const { name, img, tags, desc, url } = work
+  const { name, img, tags, url } = work
+  const { t } = useTranslation()
 
   return (
     <Box
@@ -39,7 +38,12 @@ const WorkItem = ({ work }) => {
       bg="white"
     >
       <Box>
-        <Image src={img} alt={name} objectFit="cover" boxSize="100%" />
+        <Image
+          src={img}
+          alt={t(`work.${name}.title`)}
+          objectFit="cover"
+          boxSize="100%"
+        />
       </Box>
       <Flex direction={'column'} p={5}>
         <Flex mb={5} flexWrap="wrap">
@@ -60,11 +64,12 @@ const WorkItem = ({ work }) => {
           display="flex"
           align="flex-start"
         >
-          {name} <ExternalLinkIcon display="inline-block" ml="2" />
+          {t(`work.${name}.title`)}
+          <ExternalLinkIcon display="inline-block" ml="2" />
         </Heading>
 
         <Text color="text" mb={5}>
-          {desc}
+          {t(`work.${name}.desc`)}
         </Text>
       </Flex>
     </Box>
@@ -81,7 +86,7 @@ const WorkList = () => {
       flexWrap="wrap"
     >
       {Works.map((work, index) => (
-        <WorkItem work={work} key={work.name} index={index} />
+        <WorkItem work={work} key={work.title} index={index} />
       ))}
     </Flex>
   )

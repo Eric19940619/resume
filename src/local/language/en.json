@@ -13,5 +13,26 @@
     "part1": "Hi! My name is",
     "part2": "I'm a software developer.",
     "part3": "Focus on learning Javascript and front end knowledge."
+  },
+  "skill": {
+    "html": "I use Semantic Elements when I building a website",
+    "css": "I know what breakpoint is and I also know what responsive web design is.I use SASS as my CSS preprocessor. I can use bootstrap or other UI library in my project.",
+    "javascript": "I know what Webpack is and I know how to use it. I can fetch data from a database. I also use other library when I'm building a website.",
+    "vuejs": "I can build a website with Vuejs. My state container is Vuex and routing with Vue Router",
+    "react": "I use function component with hooks and routing with react-router-dom. Also, I use redux as my state container。"
+  },
+  "work": {
+    "work1": {
+      "title": "NewYorkTimes API",
+      "desc": "I use Axios to fetch data. When the view is scrolling, the more news will be shown in the view. I didn't use any library in this project "
+    },
+    "work2": {
+      "title": "Online Order",
+      "desc": "This project is building with Vuejs. First, I fetching data with Axios and pass the data to Vuex. And I use LocalStorage to save list what user add to the shopping cart.  "
+    },
+    "work3": {
+      "title": "Cryptocurrencies",
+      "desc": "I use Axios to get data from CoinGecko API and the data display in a bootstrap table. The bar charts are drawing with C3js.  "
+    }
   }
 }
