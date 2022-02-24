@@ -86,7 +86,7 @@ const WorkList = () => {
       flexWrap="wrap"
     >
       {Works.map((work, index) => (
-        <WorkItem work={work} key={work.title} index={index} />
+        <WorkItem work={work} key={work.name} index={index} />
       ))}
     </Flex>
   )
