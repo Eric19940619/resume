@@ -1,22 +1,12 @@
 import { MoonIcon, SunIcon } from '@chakra-ui/icons'
 import { Button, Flex, Link, Text, useColorMode } from '@chakra-ui/react'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { NavLink } from 'react-router-dom'
-import i18n from '../../i18n/i18n'
 
-const Menu = ({ onClick = null }) => {
+const Menu = ({ onClick = null, toggleLangMode, lang }) => {
   const { t } = useTranslation()
   const { colorMode, toggleColorMode } = useColorMode()
-  const [lang, setLang] = useState(navigator.language || 'en')
-
-  useEffect(() => {
-    i18n.changeLanguage(lang)
-  }, [lang])
-
-  const toggleLangMode = () => {
-    lang === 'zh-TW' ? setLang('en') : setLang('zh-TW')
-  }
 
   const Links = ['about', 'skill', 'work'].map((link, index) => {
     return (

@@ -11,16 +11,25 @@ import {
   useColorModeValue,
   useDisclosure
 } from '@chakra-ui/react'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { ReactComponent as Logo } from '../../assets/image/logo.svg'
+import i18n from '../../i18n/i18n'
 import Menu from '../Menu'
 
 const AppHeader = () => {
   const logocolor = useColorModeValue('black', '#64ffda')
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = React.useRef()
+  const [lang, setLang] = useState(navigator.language)
 
+  useEffect(() => {
+    i18n.changeLanguage(lang)
+  }, [lang])
+
+  const toggleLangMode = () => {
+    lang === 'zh-TW' ? setLang('en') : setLang('zh-TW')
+  }
   return (
     <Flex
       as="nav"
@@ -56,7 +65,11 @@ const AppHeader = () => {
         <DrawerContent>
           <DrawerCloseButton />
           <DrawerBody>
-            <Menu onClick={onClose} />
+            <Menu
+              onClick={onClose}
+              toggleLangMode={toggleLangMode}
+              lang={lang}
+            />
           </DrawerBody>
         </DrawerContent>
       </Drawer>
@@ -67,7 +80,7 @@ const AppHeader = () => {
         direction={{ base: 'column', lg: 'row' }}
         display={{ base: 'none', lg: 'flex' }}
       >
-        <Menu />
+        <Menu toggleLangMode={toggleLangMode} lang={lang} />
       </Flex>
     </Flex>
   )
